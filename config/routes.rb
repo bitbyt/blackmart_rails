@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'sessions/new'
+
   root 'static_pages#home'
 
   # static pages routes, not connected to models
@@ -15,8 +17,9 @@ Rails.application.routes.draw do
   get '/categories/new', to: 'categories#new'
 
   # login routes
-  get '/login', to: 'sessions#new'
-  post '/login', to: 'sessions#create'
+  get    '/login',   to: 'sessions#new'
+  post   '/login',   to: 'sessions#create'
+  delete '/logout',  to: 'sessions#destroy'
 
   # restful routes
   resources :users, except: [ :new ]
