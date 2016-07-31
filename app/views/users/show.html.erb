@@ -1,0 +1,41 @@
+<% provide(:title, @user.name) %>
+
+<p id="notice"><%= notice %></p>
+
+<h1>
+  <%= gravatar_for @user %>
+  <%= @user.name %>
+</h1>
+
+<p>
+  <strong>Email:</strong>
+  <%= @user.email %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @user.address %>
+</p>
+
+<p>
+  <strong>Password:</strong>
+  <%= @user.password %>
+</p>
+
+<p>
+  <strong>Cc number:</strong>
+  <%= @user.cc_number %>
+</p>
+
+<p>
+  <strong>Photo url:</strong>
+  <%= @user.photo_url %>
+</p>
+
+<p>
+  <strong>Cover url:</strong>
+  <%= @user.cover_url %>
+</p>
+
+<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Back', users_path %>

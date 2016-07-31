@@ -1,0 +1,430 @@
+body {
+   padding-top: 50px;
+   background: #4C4C47;
+   color: #2D2D2A;
+   font-size: 1.5em;
+   font-family: 'Open Sans', sans-serif;
+ }
+
+ main {
+   min-height: 100vh;
+ }
+
+ footer {
+   text-align: center;
+   padding: 2rem;
+   background-color: #141301;
+   font-size: 1.2rem;
+   margin-top: 2rem;
+ }
+
+ a {
+   color: #141301;
+   font-weight: 700;
+ }
+
+ a:hover {
+   color: #C14953;
+   text-decoration: none;
+ }
+
+ h1, h2, h3, h4, h5, h6 {
+   font-family: "serenity",sans-serif;
+   font-weight: 	900;
+ }
+
+ h4, h5, h6 {
+   font-weight: 	300;
+ }
+
+ .alert {
+   border-radius: 0;
+ }
+
+ .alert-success {
+   background-color: #4ECDC4;
+   color: #1A535C;
+   border: none;
+   padding: 2rem;
+   text-align: center;
+   font-family: "serenity",sans-serif;
+   font-weight: 	900;
+ }
+
+ .alert-dismissable .close,
+ .alert-dismissible .close {
+   right: 0;
+ }
+
+ .table-link>li {
+   vertical-align: top;
+   display: inline-block;
+   margin-left: 0.8rem;
+ }
+
+ .table-link>li>form {
+   display: inline-block;
+ }
+
+ .fa-input {
+   font-family: FontAwesome, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+   background:none;
+   border:none;
+   font-size:1em;
+   color: #141301;
+   padding: 0;
+ }
+
+ .fa-input:hover {
+   color: #C14953;
+ }
+
+ .col-centered{
+ float: none;
+ margin: 0 auto;
+ }
+
+ .jumbotron {
+   background: #2D2D2A;
+   color: #E5DCC5;
+   font-family: "serenity",sans-serif;
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center;
+ }
+
+ .jumbotron-home {
+   background-image: image-url("blackmart-hero-bg.jpg");
+ }
+
+ .jumbotron-shop {
+   background-image: image-url("blackmart-shop-bg.jpg");
+ }
+
+ .btn {
+   border-radius: 4rem;
+   font-size: 1.8rem;
+   padding: 2rem 3rem;
+   font-family: "serenity",sans-serif;
+   font-weight: 	600;
+ }
+
+ .btn-hero {
+   border: 2px solid #E5DCC5;
+   background: none;
+   color: #E5DCC5;
+   margin-top: 3rem;
+ }
+
+ .btn-hero:hover {
+   border: 2px solid #E5DCC5;
+   background: #E5DCC5;
+   color: #141301;
+ }
+
+ .btn-brand {
+   border: 2px solid  #C14953;
+   background: none;
+   color:  #C14953;
+   margin-top: 3rem;
+ }
+
+ .btn-brand:hover {
+   border: 2px solid #C14953;
+   background:  #C14953;
+ }
+
+ .btn-base {
+   border: 2px solid  #2D2D2A;
+   background: none;
+   color:  #2D2D2A;
+   margin-top: 3rem;
+ }
+
+ .btn-base:hover {
+   border: 2px solid #2D2D2A;
+   background:  #2D2D2A;
+   color: #4C4C47;
+ }
+
+ .btn-submit {
+   border: 2px solid  #C14953;
+   background: none;
+   color:  #C14953;
+   margin-top: 3rem;
+ }
+
+ .btn-submit:hover {
+   border: 2px solid #C14953;
+   background:  #C14953;
+ }
+
+ .btn-buy {
+   border: 2px solid  #141301;
+   background: #141301;
+   color:  #E5DCC5;
+   margin-top: 3rem;
+ }
+
+ .btn-buy:hover {
+   border: 2px solid #C14953;
+   background:  #C14953;
+   color: #141301;
+ }
+
+ .navbar {
+   font-family: "serenity",sans-serif;
+ }
+
+ .navbar-default {
+   background-color: #141301;
+   border-bottom: none;
+ }
+
+ .navbar-default .navbar-nav>li>a {
+   font-weight: 400;
+   color: #4C4C47;
+ }
+
+ .navbar-default .navbar-nav>li>a:hover {
+   font-weight: 500;
+   color: #C14953;
+ }
+
+ .navbar-default .navbar-nav>.open>a,
+ .navbar-default .navbar-nav>.open>a:focus,
+ .navbar-default .navbar-nav>.open>a:hover {
+   background-color: #E5DCC5;
+   color: #141301;
+ }
+
+ .dropdown-menu {
+   background-color: #E5DCC5;
+ }
+
+ .dropdown-menu>li>a:focus,
+ .dropdown-menu>li>a:hover {
+   background-color: #C14953;
+   color: #E5DCC5;
+ }
+
+ .navbar-brand-logo {
+   height: 20px;
+   width: 110px;
+   padding: 0;
+   background-image: image-url("blackmart-logo-dark-grey.png");
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: auto 100%
+ }
+
+ .navbar-brand-logo:hover {
+   background-image: image-url("blackmart-logo-red.png");
+ }
+
+ .navbar-toggle {
+   background: none;
+   border: none;
+   padding-right: 0;
+ }
+
+ .navbar-default .navbar-toggle:hover {
+   background: none;
+ }
+
+ .navbar-toggle:hover  > .icon-bar {
+   background: #C14953;
+ }
+
+ .form-control {
+   border-radius: 2rem;
+   padding: 3rem 1.5rem;
+   background: #4C4C47;
+   color: #141301;
+   border: 2px solid  #2D2D2A;
+ }
+
+ .form-textarea {
+   padding: 1.5rem;
+   resize: vertical;
+ }
+
+ .divider {
+   height: 1px;
+   width:100%;
+   display:block; /* for use on default inline elements like span */
+   margin: 9px 0;
+   overflow: hidden;
+   background-color: #2D2D2A;
+ }
+
+ .divider-light {
+   background-color: #B2AB9A;
+ }
+
+ .divider-clear {
+   margin: 5rem 0;
+ }
+
+ .divider-clear-xs {
+   margin: 2rem 0;
+ }
+
+ .cover-photo {
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center;
+   height: 200px;
+   position: relative;
+   margin-bottom: -120px;
+   z-index: -1;
+ }
+
+ .profile-pic {
+   width: 150px;
+   margin: 4rem auto 2rem auto;
+ }
+
+ .profile-pic>.img-circle {
+   border: 5px solid #4C4C47;
+ }
+
+ .action-buttons a {
+   border-top-right-radius: 0;
+   border-bottom-right-radius: 0;
+   float: left;
+   padding: 0.8rem 1.8rem;
+   font-size: 1.2rem;
+ }
+
+ .action-buttons input {
+   border-top-left-radius: 0;
+   border-bottom-left-radius: 0;
+   float: left;
+   padding: 0.8rem 1.2rem;
+   font-size: 1.2rem;
+ }
+
+ .table-responsive {
+   border: none;
+ }
+
+ .panel-default {
+   border-radius: 2rem;
+   border: none;
+   background: #E5DCC5;
+   color: #4C4C47;
+ }
+
+ .table>thead>tr>th {
+   border-bottom: 1px solid #B2AB9A;
+ }
+
+ .table>tbody>tr>td,
+ .table>tbody>tr>th,
+ .table>tfoot>tr>td,
+ .table>tfoot>tr>th,
+ .table>thead>tr>td,
+ .table>thead>tr>th {
+   border-top: 1px solid #CFC6B2;
+ }
+
+ .card {
+   margin-bottom: 3rem;
+ }
+
+ .card>.photo {
+   width: 100%;
+   border-top-right-radius: 3rem;
+   border-top-left-radius: 3rem;
+
+ }
+
+ .card>.content {
+   width: 100%;
+   background: #E5DCC5;
+   padding: 2rem;
+   padding-bottom: 3rem;
+   border-bottom-right-radius: 3rem;
+   border-bottom-left-radius: 3rem;
+ }
+
+ .card>.content-middle {
+   width: 100%;
+   background: #E5DCC5;
+   padding: 2rem;
+   padding-bottom: 3rem;
+ }
+
+ .card>.content-middle>h3 {
+   font-size: 2rem;
+ }
+
+ .card>.btn-card {
+   width: 100%;
+   border-radius: 3rem;
+   border-top-right-radius: 0;
+   border-top-left-radius: 0;
+   margin-top: 0;
+ }
+
+ .product-card {
+   margin-top: 4rem;
+ }
+
+ .product-pic {
+   width: 100%;
+   height: 200px;
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center;
+ }
+
+ .sidebar {
+   list-style: none;
+   padding-left: 0;
+ }
+
+ .sidebar>li {
+   list-style: none;
+   margin: 2rem 0;
+ }
+
+
+/* miscellaneous */
+
+.debug_dump {
+  clear: both;
+  float: left;
+  width: 100%;
+  margin-top: 45px;
+  @include box_sizing;
+}
+
+
+#error_explanation {
+  color: red;
+  ul {
+    color: red;
+    margin: 0 0 30px 0;
+  }
+}
+
+.field_with_errors {
+  @extend .has-error;
+  .form-control {
+    color: $state-danger-text;
+  }
+}
+
+/* Users index */
+
+.users {
+  list-style: none;
+  margin: 0;
+  li {
+    overflow: auto;
+    padding: 10px 0;
+    border-bottom: 1px solid $gray-lighter;
+  }
+}

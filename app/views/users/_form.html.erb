@@ -1,0 +1,57 @@
+<%= form_for(user) do |f| %>
+  <% if user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+      <ul>
+      <% user.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field form-group col-sm-6">
+    <%= f.label :name %>
+    <%= f.text_field :name, class: 'form-control' %>
+  </div>
+
+  <div class="field form-group col-sm-6">
+    <%= f.label :email %>
+    <%= f.text_field :email, class: 'form-control' %>
+  </div>
+
+  <div class="field form-group col-sm-12">
+    <%= f.label :address %>
+    <%= f.text_area :address, class: 'form-control' %>
+  </div>
+
+  <div class="field form-group col-sm-6">
+    <%= f.label :password %>
+    <%= f.text_field :password, class: 'form-control' %>
+  </div>
+
+  <div class="field form-group col-sm-6">
+    <%= f.label :cc_number %>
+    <%= f.number_field :cc_number, class: 'form-control' %>
+  </div>
+
+  <div class="field form-group col-sm-6">
+    <%= f.label :photo_url %>
+    <%= f.text_field :photo_url, class: 'form-control' %>
+  </div>
+
+  <div class="field form-group col-sm-6">
+    <%= f.label :cover_url %>
+    <%= f.text_field :cover_url, class: 'form-control' %>
+  </div>
+
+  <div class="actions col-sm-12">
+    <%= f.submit 'Save', :class => 'btn btn-submit btn-block' %>
+  </div>
+
+  <div class="gravatar_edit">
+      <%= gravatar_for @user %>
+      <a href="http://gravatar.com/emails" target="_blank">change</a>
+    </div>
+<% end %>

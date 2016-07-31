@@ -1,0 +1,48 @@
+<% provide(:title, 'Sign up') %>
+
+<div class="container-fluid">
+  <%= form_for(@user, :html=>{:class=> "row", 'data-parsley-validate' => '' }, validate: true) do |f| %>
+    <%= render 'shared/error_messages' %>
+
+    <h2 class="text-center">Three Reasons to Sign Up</h2>
+    <div class="col-sm-4">
+      <h4>Enjoy low everyday prices
+  on over 14,000 products</h4>
+    </div>
+    <div class="col-sm-4">
+      <h4>Save up to 50% with our
+  weekly sales and promotions</h4>
+    </div>
+    <div class="col-sm-4">
+      <h4>Choose your own delivery time, available 7 days of the week</h4>
+    </div>
+
+    <div class="field form-group col-sm-6">
+      <%= f.label :name %>
+      <%= f.text_field :name, class: 'form-control', :"data-required" => "true", :"data-notblank" => "true"  %>
+    </div>
+
+    <div class="field form-group col-sm-6">
+      <%= f.label :email %>
+      <%= f.text_field :email, class: 'form-control', :"data-required" => "true", :"data-notblank" => "true"  %>
+    </div>
+
+    <div class="field form-group col-sm-6">
+      <%= f.label :password %>
+      <%= f.password_field :password, class: 'form-control', :"data-required" => "true", :"data-notblank" => "true"  %>
+    </div>
+
+    <div class="field form-group col-sm-6">
+      <%= f.label :password_confirmation %>
+      <%= f.password_field :password_confirmation, class: 'form-control', :"data-required" => "true", :"data-notblank" => "true"  %>
+    </div>
+
+    <div class="col-sm-6">
+      <%= link_to 'Back', users_path, class: "btn btn-lg btn-base btn-block" %>
+    </div>
+
+    <div class="actions col-sm-6">
+      <%= f.submit 'Join the fam', :class => 'btn btn-submit btn-block' %>
+    </div>
+  <% end %>
+</div>
