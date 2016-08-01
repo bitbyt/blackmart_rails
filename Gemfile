@@ -33,6 +33,8 @@ gem 'bcrypt', '3.1.11'
 # parsley for client side validation
 gem "parsley-rails"
 
+gem 'pg'
+
 
 # fakerrrrr
 gem 'faker',                   '1.6.3'
