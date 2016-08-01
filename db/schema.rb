@@ -27,16 +27,14 @@ ActiveRecord::Schema.define(version: 20160731121355) do
 
   create_table "products", force: :cascade do |t|
     t.string   "name"
-    t.decimal  "price",            precision: 8, scale: 2
+    t.decimal  "price",       precision: 8, scale: 2
     t.text     "description"
-    t.integer  "product_photo_id"
     t.integer  "brand_id"
     t.integer  "category_id"
-    t.datetime "created_at",                               null: false
-    t.datetime "updated_at",                               null: false
+    t.datetime "created_at",                          null: false
+    t.datetime "updated_at",                          null: false
     t.index ["brand_id"], name: "index_products_on_brand_id"
     t.index ["category_id"], name: "index_products_on_category_id"
-    t.index ["product_photo_id"], name: "index_products_on_product_photo_id"
   end
 
   create_table "relationships", force: :cascade do |t|
@@ -55,8 +53,6 @@ ActiveRecord::Schema.define(version: 20160731121355) do
     t.text     "address"
     t.string   "password"
     t.integer  "cc_number"
-    t.string   "photo_url"
-    t.string   "cover_url"
     t.datetime "created_at",                        null: false
     t.datetime "updated_at",                        null: false
     t.string   "password_digest"

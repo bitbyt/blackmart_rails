@@ -6,8 +6,6 @@ class CreateUsers < ActiveRecord::Migration[5.0]
       t.text :address
       t.string :password
       t.integer :cc_number
-      t.string :photo_url
-      t.string :cover_url
 
       t.timestamps
     end
