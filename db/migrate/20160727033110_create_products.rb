@@ -4,8 +4,8 @@ class CreateProducts < ActiveRecord::Migration[5.0]
       t.string :name
       t.decimal :price, :precision => 8, :scale => 2
       t.text :description
-      t.references :brand, foreign_key: true
-      t.references :category, foreign_key: true
+      t.references :brand
+      t.references :category
 
       t.timestamps
     end
