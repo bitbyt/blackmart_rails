@@ -12,7 +12,9 @@ User.create!(name:  "The Admin User",
              email: "adminuser@admin.com",
              password:              "password",
              password_confirmation: "password",
-             admin: true)
+             admin: true,
+             activated: true,
+             activated_at: Time.zone.now)
 
 99.times do |n|
   name  = Faker::Name.name
@@ -21,5 +23,16 @@ User.create!(name:  "The Admin User",
   User.create!(name:  name,
                email: email,
                password:              password,
-               password_confirmation: password)
+               password_confirmation: password,
+               activated: true,
+               activated_at: Time.zone.now)
 end
+
+
+# Following relationships
+users = User.all
+user  = users.first
+following = users[2..50]
+followers = users[3..40]
+following.each { |followed| user.follow(followed) }
+followers.each { |follower| follower.follow(user) }

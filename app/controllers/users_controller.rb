@@ -24,6 +24,7 @@ class UsersController < ApplicationController
   # GET /users/1
   # GET /users/1.json
   def show
+    @user = User.find(params[:id])
   end
 
   # GET /users/new
@@ -43,8 +44,8 @@ class UsersController < ApplicationController
 
     respond_to do |format|
       if @user.save
-        log_in @user
-        format.html { redirect_to @user, notice: 'User was successfully created.' }
+        @user.send_activation_email
+        format.html { redirect_to @user, notice: 'Please check your email to activate your account.' }
         format.json { render :show, status: :created, location: @user }
       else
         format.html { render :new }
@@ -75,6 +76,20 @@ class UsersController < ApplicationController
       format.html { redirect_to users_url, notice: 'User was successfully deleted.' }
       format.json { head :no_content }
     end
+  end
+
+  def following
+    @title = "Following"
+    @user  = User.find(params[:id])
+    @users = @user.following.paginate(page: params[:page])
+    render 'show_follow'
+  end
+
+  def followers
+    @title = "Followers"
+    @user  = User.find(params[:id])
+    @users = @user.followers.paginate(page: params[:page])
+    render 'show_follow'
   end
 
   private
