@@ -12,8 +12,7 @@ class UsersController < ApplicationController
   before_action :require_logout, only: [:new]
 
   # Give admin destroy rights
-
-   before_action :admin_user,     only: :destroy
+  before_action :admin_user,     only: :destroy
 
   # GET /users
   # GET /users.json
@@ -25,6 +24,7 @@ class UsersController < ApplicationController
   # GET /users/1.json
   def show
     @user = User.find(params[:id])
+    @products = Product.paginate(page: params[:page])
   end
 
   # GET /users/new
@@ -101,14 +101,6 @@ class UsersController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def permitted_user_params
       params.require(:user).permit(:name, :email, :address, :password, :cc_number, :photo_url, :cover_url)
-    end
-
-    def require_login
-      unless logged_in?
-        store_location
-        flash[:danger] = "Bitch, you gotta log in."
-        redirect_to login_url
-      end
     end
 
     # Confirms the correct user.

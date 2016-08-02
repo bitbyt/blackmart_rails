@@ -34,6 +34,7 @@ Rails.application.routes.draw do
   # restful routes
   resources :users, except: [ :new ]
   resources :products
+  resources :brands
   resources :categories
   resources :account_activations, only: [:edit]
   resources :password_resets,     only: [:new, :create, :edit, :update]

@@ -29,8 +29,9 @@ body {
  }
 
  h1, h2, h3, h4, h5, h6 {
-   font-family: "serenity",sans-serif;
+   font-family: $headings-font-family;
    font-weight: 	900;
+   color: $color-cream-base;
  }
 
  h4, h5, h6 {
@@ -86,7 +87,7 @@ body {
 
  .jumbotron {
    background: #2D2D2A;
-   color: #E5DCC5;
+   color: $background-color-card;
    font-family: "serenity",sans-serif;
    background-repeat: no-repeat;
    background-size: cover;
@@ -102,7 +103,7 @@ body {
  }
 
  .btn {
-   border-radius: 4rem;
+   border-radius: $border-radius-button;
    font-size: 1.8rem;
    padding: 2rem 3rem;
    font-family: "serenity",sans-serif;
@@ -110,15 +111,15 @@ body {
  }
 
  .btn-hero {
-   border: 2px solid #E5DCC5;
+   border: 2px solid $background-color-card;
    background: none;
-   color: #E5DCC5;
+   color: $background-color-card;
    margin-top: 3rem;
  }
 
  .btn-hero:hover {
-   border: 2px solid #E5DCC5;
-   background: #E5DCC5;
+   border: 2px solid $background-color-card;
+   background: $background-color-card;
    color: #141301;
  }
 
@@ -162,7 +163,7 @@ body {
  .btn-buy {
    border: 2px solid  #141301;
    background: #141301;
-   color:  #E5DCC5;
+   color:  $background-color-card;
    margin-top: 3rem;
  }
 
@@ -194,18 +195,18 @@ body {
  .navbar-default .navbar-nav>.open>a,
  .navbar-default .navbar-nav>.open>a:focus,
  .navbar-default .navbar-nav>.open>a:hover {
-   background-color: #E5DCC5;
+   background-color: $background-color-card;
    color: #141301;
  }
 
  .dropdown-menu {
-   background-color: #E5DCC5;
+   background-color: $background-color-card;
  }
 
  .dropdown-menu>li>a:focus,
  .dropdown-menu>li>a:hover {
    background-color: #C14953;
-   color: #E5DCC5;
+   color: $background-color-card;
  }
 
  .navbar-brand-logo {
@@ -237,7 +238,7 @@ body {
  }
 
  .form-control {
-   border-radius: 2rem;
+   border-radius: $border-radius-form;
    padding: 3rem 1.5rem;
    background: #4C4C47;
    color: #141301;
@@ -310,9 +311,9 @@ body {
  }
 
  .panel-default {
-   border-radius: 2rem;
+   border-radius: $border-radius-form;
    border: none;
-   background: #E5DCC5;
+   background: $background-color-card;
    color: #4C4C47;
  }
 
@@ -342,7 +343,7 @@ body {
 
  .card>.content {
    width: 100%;
-   background: #E5DCC5;
+   background: $background-color-card;
    padding: 2rem;
    padding-bottom: 3rem;
    border-bottom-right-radius: 3rem;
@@ -351,7 +352,7 @@ body {
 
  .card>.content-middle {
    width: 100%;
-   background: #E5DCC5;
+   background: $background-color-card;
    padding: 2rem;
    padding-bottom: 3rem;
  }
@@ -362,7 +363,7 @@ body {
 
  .card>.btn-card {
    width: 100%;
-   border-radius: 3rem;
+   border-radius: $border-radius-card;
    border-top-right-radius: 0;
    border-top-left-radius: 0;
    margin-top: 0;
@@ -433,19 +434,16 @@ body {
 .stats {
   overflow: auto;
   margin-top: 0;
-  padding: 0;
+  padding: 1rem;
+  border-radius: $border-radius-form;
+  background-color:  $background-color-card;
   a {
     float: left;
     padding: 0 10px;
     border-left: 1px solid $gray-lighter;
-    color: gray;
     &:first-child {
       padding-left: 0;
       border: 0;
-    }
-    &:hover {
-      text-decoration: none;
-      color: blue;
     }
   }
   strong {
@@ -466,4 +464,19 @@ body {
 
 .users.follow {
   padding: 0;
+}
+
+.content-panel {
+  border-radius: $border-radius-base;
+  background-color:  $background-color-card;
+  padding: 2rem;
+  h1, h2, h3, h4, h5, h6 {
+    color: $color-medium-grey;
+  }
+}
+
+.sidebar {
+  border-radius: $border-radius-base;
+  background-color:  $background-color-card;
+  margin-top: 3rem;
 }
