@@ -8,6 +8,11 @@ class ProductsController < ApplicationController
     @products = Product.all
   end
 
+  def shop
+    @products = Product.all
+    @order_item = current_order.order_items.new
+  end
+
   # GET /products/1
   # GET /products/1.json
   def show

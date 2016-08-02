@@ -9,7 +9,7 @@ class SessionsController < ApplicationController
         # log the user in and show log in message
         log_in user
         remember user
-        redirect_back_or user
+        redirect_back_or shop_path
       else
         message  = "Account not activated. "
         message += "Check your email for the activation link."

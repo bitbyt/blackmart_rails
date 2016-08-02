@@ -332,42 +332,46 @@ body {
 
  .card {
    margin-bottom: 3rem;
+
+   h1,h2,h3,h4,h5,h6 {
+     color: $color-dark-grey;
+   }
+
+   .photo {
+     width: 100%;
+     border-top-right-radius: 3rem;
+     border-top-left-radius: 3rem;
+   }
+
+   .content {
+     width: 100%;
+     background: $background-color-card;
+     padding: 2rem;
+     padding-bottom: 3rem;
+     border-bottom-right-radius: 3rem;
+     border-bottom-left-radius: 3rem;
+   }
+
+   .content-middle {
+     width: 100%;
+     background: $background-color-card;
+     padding: 2rem;
+     padding-bottom: 3rem;
+   }
+
+   .content-middle>h3 {
+     font-size: 2rem;
+   }
+
+   .btn-card {
+     width: 100%;
+     border-radius: $border-radius-card;
+     border-top-right-radius: 0;
+     border-top-left-radius: 0;
+     margin-top: 0;
+   }
  }
 
- .card>.photo {
-   width: 100%;
-   border-top-right-radius: 3rem;
-   border-top-left-radius: 3rem;
-
- }
-
- .card>.content {
-   width: 100%;
-   background: $background-color-card;
-   padding: 2rem;
-   padding-bottom: 3rem;
-   border-bottom-right-radius: 3rem;
-   border-bottom-left-radius: 3rem;
- }
-
- .card>.content-middle {
-   width: 100%;
-   background: $background-color-card;
-   padding: 2rem;
-   padding-bottom: 3rem;
- }
-
- .card>.content-middle>h3 {
-   font-size: 2rem;
- }
-
- .card>.btn-card {
-   width: 100%;
-   border-radius: $border-radius-card;
-   border-top-right-radius: 0;
-   border-top-left-radius: 0;
-   margin-top: 0;
- }
 
  .product-card {
    margin-top: 4rem;
@@ -479,4 +483,8 @@ body {
   border-radius: $border-radius-base;
   background-color:  $background-color-card;
   margin-top: 3rem;
+}
+
+.alert {
+  margin-bottom: 0;
 }

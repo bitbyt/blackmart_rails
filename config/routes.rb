@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+  get 'order_items/create'
+
+  get 'order_items/update'
+
+  get 'order_items/destroy'
+
+  get 'carts/show'
+
   get 'password_resets/new'
 
   get 'password_resets/edit'
@@ -16,6 +24,7 @@ Rails.application.routes.draw do
   get '/signup', to: 'users#new'
   get '/products', to: 'products#index'
   get '/products/new', to: 'products#new'
+  get '/shop', to: 'products#shop'
 
   get '/categories', to: 'categories#index'
   get '/categories/new', to: 'categories#new'
@@ -32,6 +41,7 @@ Rails.application.routes.draw do
   end
 
   # restful routes
+  resource :cart, only: [:show]
   resources :users, except: [ :new ]
   resources :products
   resources :brands
@@ -39,6 +49,7 @@ Rails.application.routes.draw do
   resources :account_activations, only: [:edit]
   resources :password_resets,     only: [:new, :create, :edit, :update]
   resources :relationships,       only: [:create, :destroy]
+  resources :order_items, only: [:create, :update, :destroy]
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
