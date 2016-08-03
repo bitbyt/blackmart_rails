@@ -11,36 +11,36 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="field form-group col-sm-6">
     <%= f.label :name %>
-    <%= f.text_field :name %>
+    <%= f.text_field :name, class: 'form-control' %>
   </div>
 
-  <div class="field">
+  <div class="field form-group col-sm-6">
     <%= f.label :price %>
-    <%= f.text_field :price %>
+    <%= f.text_field :price, class: 'form-control' %>
   </div>
 
-  <div class="field">
+  <div class="field form-group col-sm-12">
     <%= f.label :description %>
-    <%= f.text_area :description %>
+    <%= f.text_area :description, class: 'form-control' %>
   </div>
 
-  <div class="field">
+  <div class="field form-group col-sm-6">
     <%= f.label :brand_id %>
-    <%= f.text_field :brand_id %>
+    <%= f.text_field :brand_id, class: 'form-control' %>
   </div>
 
-  <div class="field">
+  <div class="field form-group col-sm-6">
     <%= f.label :category_id %>
-    <%= f.text_field :category_id %>
+    <%= f.text_field :category_id, class: 'form-control' %>
   </div>
 
-  <span class="picture">
-    <%= f.file_field :picture %>
+  <span class="picture col-sm-12">
+    <%= f.file_field :picture%>
   </span>
 
-  <div class="actions">
-    <%= f.submit %>
+  <div class="actions col-sm-12">
+    <%= f.submit 'Add Product', :class => 'btn btn-submit btn-block' %>
   </div>
 <% end %>

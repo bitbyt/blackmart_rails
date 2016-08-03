@@ -25,6 +25,8 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
     @products = Product.paginate(page: params[:page])
+    @brands = Brand.paginate(page: params[:page])
+    @categories = Category.paginate(page: params[:page])
   end
 
   # GET /users/new
