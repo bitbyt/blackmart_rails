@@ -185,6 +185,10 @@ body {
  .navbar-default .navbar-nav>li>a {
    font-weight: 400;
    color: #4C4C47;
+
+   &:focus {
+     color: #4C4C47;
+   }
  }
 
  .navbar-default .navbar-nav>li>a:hover {
@@ -487,4 +491,50 @@ body {
 
 .alert {
   margin-bottom: 0;
+  text-align: center;
+}
+
+.navbar {
+
+  .divider-vertical {
+    height: 50px;
+    margin: 0;
+    border-right: 1px solid $color-dark-grey;
+  }
+
+  .divider {
+    background-color: $color-dark-grey;
+  }
+}
+
+@media (max-width: $grid-float-breakpoint) {
+  .navbar {
+    .divider-vertical {
+      height: 0;
+    }
+  }
+}
+
+.nav-pills {
+
+  li {
+    a {
+      border-radius: 0;
+    }
+  }
+
+  li:hover {
+    &:first-child {
+      a {
+        border-top-left-radius: $border-radius-base;
+        border-top-right-radius: $border-radius-base;
+      }
+    }
+    &:last-child {
+      a {
+        border-bottom-left-radius: $border-radius-base;
+        border-bottom-right-radius: $border-radius-base;
+      }
+    }
+  }
 }

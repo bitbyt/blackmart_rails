@@ -47,10 +47,12 @@ ActiveRecord::Schema.define(version: 20160802065040) do
     t.decimal  "tax",             precision: 8, scale: 2
     t.decimal  "shipping",        precision: 8, scale: 2
     t.decimal  "total",           precision: 8, scale: 2
+    t.integer  "user_id"
     t.integer  "order_status_id"
     t.datetime "created_at",                              null: false
     t.datetime "updated_at",                              null: false
     t.index ["order_status_id"], name: "index_orders_on_order_status_id"
+    t.index ["user_id"], name: "index_orders_on_user_id"
   end
 
   create_table "products", force: :cascade do |t|
